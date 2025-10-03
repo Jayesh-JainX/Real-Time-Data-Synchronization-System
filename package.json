@@ -1,0 +1,36 @@
+{
+  "name": "data-sync-system",
+  "version": "1.0.0",
+  "description": "Near real-time/configurable data synchronization between local and cloud tables on the same DB (SQLite)",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "node dist/index.js",
+    "sync": "ts-node src/index.ts --once",
+    "dev": "ts-node src/index.ts",
+    "seed": "ts-node src/scripts/seed.ts",
+    "demo": "npm run build && node dist/index.js --demo"
+  },
+  "keywords": [
+    "sync",
+    "sqlite",
+    "cron",
+    "conflict",
+    "synchronization"
+  ],
+  "author": "Jayesh Jain",
+  "dependencies": {
+    "node-cron": "^3.0.3",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@types/sqlite3": "^3.1.11",
+    "@types/yargs": "^17.0.32",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}

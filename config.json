@@ -1,0 +1,13 @@
+{
+  "databaseFile": "data.sqlite",
+  "schedule": { "type": "interval", "everySeconds": 15 },
+  "collections": [
+    {
+      "name": "items",
+      "localTable": "local_items",
+      "cloudTable": "cloud_items",
+      "direction": "both",
+      "conflictPolicy": "latest_wins"
+    }
+  ]
+} 
